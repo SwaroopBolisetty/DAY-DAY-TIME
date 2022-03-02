@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TIME</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body onload="startTime();">
+
+    <div class="content">
+
+
+          <div class="day">
+
+        <script>
+          var myDate=new Date();
+          var d=myDate.getDate();
+          if(d==1){
+            d=d+"st";
+          }
+          if(d==2){
+            d=d+"nd";
+          }
+          if(d==3){
+            d=d+"rd";
+          }
+          if(d>3){
+            d=d+"th";
+          }
+          var m=myDate.getMonth();
+          var Month=["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
+          var y=myDate.getFullYear();
+          document.write(d+", "+Month[m]+" "+y);
+        </script>
+      </div>
+
+     <div class="date" id="date">
+       <script type="text/javascript">
+
+       var myDate = new Date();
+        var myDay = myDate.getDay();
+       var weekday = ['Sunday', 'Monday', 'Tuesday',
+               'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+         document.write(weekday[myDay]);
+</script>
+     </div>
+
+
+     <div class="time" id="time">
+       <script type="text/javascript">
+         function startTime(){
+           var today=new Date();
+           var h=today.getHours();
+           var m=today.getMinutes();
+           var s=today.getSeconds();
+           var session="AM";
+
+         if(h >= 12){
+             h = h - 12;
+             session = "PM";
+         }
+         if(h == 0){
+           h = 12;
+         }
+
+             h=(h<10)?"0"+h:h;
+             m=(m<10)?"0"+m:m;
+             s=(s<10)?"0"+s:s;
+
+           document.getElementById("time").innerHTML=h+":"+m+":"+s+" "+session+" ";
+           setTimeout('startTime()',1000);
+         }
+
+   </script>
+         </div>
+  </div>
+  </body>
+</html>

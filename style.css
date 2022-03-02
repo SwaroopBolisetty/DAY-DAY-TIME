@@ -1,0 +1,43 @@
+*{
+  margin:0;
+  padding:0;
+  border-spacing: border-box;
+}
+
+.content{
+  width:100%;
+  height:100vh;
+  display:flex;
+  background: linear-gradient(to right,skyblue,orange,lightgreen,lightpink);
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.day:hover{
+  color:red;
+}
+.date:hover{
+  color:green;
+}
+.time:hover{
+  color:blue;
+}
+.time {
+  padding:25px;
+  border-radius: 30%;
+  border:solid 1px orange;
+  background:linear-gradient(to left,skyblue,orange,lightgreen,lightpink);
+}
+.day{
+  padding:25px;
+  border-radius: 30%;
+  border:solid 1px orange;
+  background:linear-gradient(to left,skyblue,orange,lightgreen,lightpink);
+}
+.date{
+  padding:25px;
+  border-radius: 30%;
+  border:solid 1px orange;
+  background:linear-gradient(to right,skyblue,orange,lightgreen,lightpink);
+}
